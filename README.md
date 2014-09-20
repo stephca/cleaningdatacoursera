@@ -3,7 +3,10 @@ Course Project for Getting and Cleaning Data
 
 Script: run_analysis.R
 
-The script performs the following steps
+The script assumes the existence of UCI HAR Dataset directory containing the raw data that was obtained from  
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
+
+The script performs the following steps.
 
 ####Merge the training and test sets to create one data set
 * Read X_test.txt, Y_test.txt, subject_text.txt
