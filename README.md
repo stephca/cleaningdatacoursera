@@ -16,7 +16,8 @@ The script performs the following steps.
 
 ####Label the combined data set with descriptive variable names
 * Read features.txt
-* Label the columns using features.txt
+* Transform the labels by 1. stripping special characters 2. expand t to time and f to frequency 3. strip extra body from some of the magnitude variable (tGravityAccMag, tBodyAccJerkMag, tBodyGyroMag, tBodyGyroJerkMag)
+* Label the columns using transformed labels
 
 ####Extract the measurements on the mean and standard deviation for each measurement
 * Identify column numbers with mean and std for each signal  
