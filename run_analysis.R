@@ -20,9 +20,20 @@ merge<-rbind(x_test,x_train)
 
 ##    4. Appropriately labels the data set with descriptive variable names. 
 ## Load the column names
-
 f<-read.table("./UCI HAR Dataset/features.txt")
-names(merge)<-c(as.character(f$V2),"activity_index","subject_number")
+## Cleanup the names
+## Strip the special characters
+cleanuplabels<-gsub("[[:punct:]]", "", f$V2)
+## Expand t to time
+cleanuplabels<-gsub("tBody", "timeBody", cleanuplabels)
+cleanuplabels<-gsub("tGravity", "timeGravity", cleanuplabels)
+## Get rid of BodyBody
+cleanuplabels<-gsub("fBodyBody", "fBody", cleanuplabels)
+## Expand f to frequency
+cleanuplabels<-gsub("fBody", "frequencyBody", cleanuplabels)
+cleanuplabels<-gsub("FGravity", "frequencyGravity", cleanuplabels)
+
+names(merge)<-c(as.character(cleanuplabels),"activity_index","subject_number")
 
 ##    2. Extracts only the measurements on the mean and standard deviation for each measurement. 
 ##  Column numbers with mean and std for each signal
