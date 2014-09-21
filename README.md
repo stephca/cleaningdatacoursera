@@ -6,6 +6,9 @@ Script: run_analysis.R
 The script assumes the existence of UCI HAR Dataset directory containing the raw data that was obtained from  
 https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip 
 
+The following files used as input:
+
+
 The script performs the following steps.
 
 ####Merge the training and test sets to create one data set
@@ -43,3 +46,5 @@ The script performs the following steps.
 
 ####Creates a tidy data set with the average of each variable for each activity
 * Use ddply to group and apply the mean function
+* The tidy data set is in the res variable after the script executes
+* The tidy data set was written to the file tidydata.txt using write.table(res,"tidydata.txt",row.names=FALSE)
