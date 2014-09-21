@@ -19,9 +19,12 @@ https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Datas
 The script performs the following steps.
 
 ####Merge the training and test sets to create one data set
-* Read X_test.txt, Y_test.txt, subject_text.txt
+* Read X_test.txt, Y_test.txt, subject_test.txt
 * Add activity_index column based on Y_test.txt 
-* Add subject_number column based on subject_text.txt
+* Add subject_number column based on subject_test.txt
+* Read X_training.txt, Y_training.txt, subject_train.txt
+* Add activity_index column based on Y_training.txt 
+* Add subject_number column based on subject_train.txt
 * Merge the test and training data using rbind
 
 ####Label the combined data set with descriptive variable names
